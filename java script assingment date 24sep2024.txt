@@ -1,0 +1,57 @@
+java script assignment date 24sep2024...
+====================================================================================================================
+q.1.Difference between let var const........
+====================================================================================================================
+let
+1.Declaration Required:-Use karne se pehle declare karna zaroori hai.
+2.Block Scope:-Block scope ka behaviour karta hai.
+3.No Re-declaration:-Same scope mein re-declare nahi kar sakte, lekin re-assign kar sakte hain.
+4.No Hoisting:-let hoisting ko support nahi karta.
+
+
+var
+1.Function/Global Scope:-Agar function ke andar declare kiya hai to function scope mein rahega; function ke bahar declare karne par globally accessible hota hai.
+2.Re-declare/Re-assign:-var ko re-declare aur re-assign kar sakte hain, last assigned value ko accept karta hai.
+3.Supports Hoisting:-var hoisting ko support karta hai.
+
+const
+1.No Re-assignment:-const ko ek baar value assign karne ke baad change nahi kar sakte.
+2.Declaration Required**: Use karne se pehle declare karna zaroori hai.
+3.No Re-declaration/Re-assignment**: Same block mein re-declare aur re-assign nahi kar sakte.
+4.No Hoisting:-const hoisting ko support nahi karta.==============================================================================================================================================================
+q.2.what is hoisting
+
+Hoisting JavaScript ka ek concept hai jisme variables aur functions ko scope ke top pe move kiya jata hai, lekin sirf declaration hoti hai, initialization nahi. Is wajah se kabhi-kabhi unexpected behavior hota hai.
+
+Hoisting Behavior:
+
+Variables hoist hote hain, lekin undefined rehte hain jab tak unhe initialize nahi kiya jata.
+Best Practice:
+
+Hamesha variables ko declare aur initialize karte samay hoisting ka dhyan rakhein, taki bugs na aaye.
+Conclusion: Hoisting ko samajhna aur sahi tarike se handle karna important hai, taki JavaScript code predictable ho.===========================================================================================================================================================
+q.3. let and var scope
+
+
+let Scope(Block Scope):-
+1. Block Level:-let se declare kiya gaya variable block scope follow karta hai, jisme uski accessibility sirf us block ke andar hoti hai for example {} ke andar.
+2. No Access Outside Block:-Block ke bahar let variable ko access nahi kiya ja sakta.
+3. Works in Loops:-let loops mein har iteration ke liye alag scope banata hai, jo code ko predictable banata hai.
+
+
+var Scope(Function Scope):-
+1. Function Level:-var se declare kiya gaya variable function scope mein hota hai, jisme variable ko poore function ke andar kahi bhi access kiya ja sakta hai.
+2. Global Access Outside Function:-Agar var function ke bahar declare kiya gaya hai, to wo globally accessible hota hai.
+3. No Block Scope:-var block scope ko follow nahi karta, isliye loops ya blocks ke andar bhi uski value function ya global level par accessible hoti hai.
+===========================================================================================================================================================
+q.4.function scope and local scope
+
+Function Scope
+1.Var Declaration:-Agar var se declare kiya gaya variable kisi function mein hai, to uski accessibility sirf us function ke andar tak hoti hai.
+2.Access Anywhere in Function:-Is variable ko function ke andar kahi bhi access kiya ja sakta hai.
+
+
+Local Scope(Block Scope):
+1.Let and Const:-Variables jo let ya const se declare hote hain, unki accessibility sirf block ke andar hoti hai, us block ke bahar access nahi kiya ja sakta.
+2.Readable Code:-Block scope code ko easy to understand banata hai.
+3.Loops:-Block scope loops mein effective hota hai, jahan har iteration ka apna scope hota hai.=====================================================================================================================================================
