@@ -932,3 +932,263 @@
 // What will be the output of the above code?
 // 1-apple-true
 // ===================================================================================================================
+
+// 56. Closure Capturing Outer Variable
+
+
+// let greeting = "Hello";
+
+// function greetUser() {
+//     return function(name) {
+//         return `${greeting}, ${name}`;
+//     };
+// }
+
+// const greet = greetUser();
+// console.log(greet("Alice"));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  57. Function with Scope and Shadowing
+
+
+// let x = 5;
+
+// function testScope() {
+//     let x = 10;
+//     return x;
+// }
+
+// console.log(testScope());
+// console.log(x);
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  58. Object Method with Rest Parameters
+
+
+// const restaurant = {
+//     name: "Pizza Place",
+//     order(...items) {
+//         return `Ordered: ${items.join(", ")}`;
+//     }
+// };
+
+// console.log(restaurant.order("Pizza", "Pasta"));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  59. Default Arguments with String Concatenation
+
+
+// function welcomeMessage(name = "Guest") {
+//     return `Welcome, ${name}!`;
+// }
+
+// console.log(welcomeMessage());
+// console.log(welcomeMessage("John"));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  60. Closure with Count and Increment
+
+
+// function createCounter(start = 0) {
+//     let count = start;
+//     return function() {
+//         return ++count;
+//     };
+// }
+
+// const counter = createCounter(5);
+// console.log(counter());
+// console.log(counter());
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  61. Rest Parameters with Array Operations
+
+
+// function findMax(...numbers) {
+//     return Math.max(...numbers);
+// }
+
+// console.log(findMax(10, 20, 30, 40));
+// console.log(findMax());
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  62. Function Returning Objects
+
+
+// function createUser(name, age) {
+//     return {
+//         name,
+//         age
+//     };
+// }
+
+// const user = createUser("Alice", 25);
+// console.log(user);
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  63. Default Parameters and Dynamic Values
+
+
+// function calculateTotal(price, tax = price * 0.1) {
+//     return price + tax;
+// }
+
+// console.log(calculateTotal(100));
+// console.log(calculateTotal(200, 30));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  64. Closure with Function Inside Function
+
+
+// function outer() {
+//     let outerVar = "Outer";
+
+//     function inner() {
+//         let innerVar = "Inner";
+//         return outerVar + " " + innerVar;
+//     }
+
+//     return inner();
+// }
+
+// console.log(outer());
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+
+//  65. Rest Operator and Array Length
+
+
+// function countArgs(...args) {
+//     return args.length;
+// }
+
+// console.log(countArgs(1, 2, 3));
+// console.log(countArgs("a", "b", "c", "d"));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  66. Object Method with Default Parameters
+
+
+// const userProfile = {
+//     name: "John",
+//     greet(greeting = "Hi") {
+//         return `${greeting}, ${this.name}`;
+//     }
+// };
+
+// console.log(userProfile.greet());
+// console.log(userProfile.greet("Hello"));
+
+
+// What will be the output of the above code?
+
+
+// ===================================================================================================================
+
+
+//  67. Rest Parameters and Sorting
+
+
+// function sortNumbers(...numbers) {
+//     return numbers.sort((a, b) => a - b);
+// }
+
+// console.log(sortNumbers(10, 5, 2, 8));
+
+
+// What will be the output of the above code?
+
+
+// ===================================================================================================================
+
+
+//  68. Closures and Private Variables
+
+
+// function bankAccount(initialBalance) {
+//     let balance = initialBalance;
+//     return function() {
+//         return balance;
+//     };
+// }
+
+// const account = bankAccount(1000);
+// console.log(account());
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  69. Default Arguments with Multiple Parameters
+
+
+// function processPayment(amount, fee = 2, discount = 0) {
+//     return amount + fee - discount;
+// }
+
+// console.log(processPayment(100, undefined, 10));
+// console.log(processPayment(200, 5));
+
+
+// What will be the output of the above code?
+
+// ===================================================================================================================
+
+//  70. Function Returning Function with Parameters
+
+
+// function multiplier(factor) {
+//     return function(number) {
+//         return number * factor;
+//     };
+// }
+
+// const double = multiplier(2);
+// console.log(double(5));
+
+
+
+
+// What will be the output of the above code?
+// ===================================================================================================================
