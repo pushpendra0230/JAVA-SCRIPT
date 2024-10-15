@@ -932,8 +932,7 @@
 // What will be the output of the above code?
 // 1-apple-true
 // ===================================================================================================================
-
-// 56. Closure Capturing Outer Variable
+// q.56. Closure Capturing Outer Variable
 
 
 // let greeting = "Hello";
@@ -949,10 +948,9 @@
 
 
 // What will be the output of the above code?
-
+// Hello, Alice
 // ===================================================================================================================
-
-//  57. Function with Scope and Shadowing
+// q.57. Function with Scope and Shadowing
 
 
 // let x = 5;
@@ -967,10 +965,10 @@
 
 
 // What will be the output of the above code?
-
+// 10
+// 5
 // ===================================================================================================================
-
-//  58. Object Method with Rest Parameters
+// q.58. Object Method with Rest Parameters
 
 
 // const restaurant = {
@@ -984,10 +982,9 @@
 
 
 // What will be the output of the above code?
-
+// Ordered: Pizza, Pasta
 // ===================================================================================================================
-
-//  59. Default Arguments with String Concatenation
+// q.59. Default Arguments with String Concatenation
 
 
 // function welcomeMessage(name = "Guest") {
@@ -999,10 +996,10 @@
 
 
 // What will be the output of the above code?
-
+// elcome, Guest!
+// Welcome, John!
 // ===================================================================================================================
-
-//  60. Closure with Count and Increment
+// q.60. Closure with Count and Increment
 
 
 // function createCounter(start = 0) {
@@ -1018,10 +1015,10 @@
 
 
 // What will be the output of the above code?
-
+// 6
+// 7
 // ===================================================================================================================
-
-//  61. Rest Parameters with Array Operations
+// q.61. Rest Parameters with Array Operations
 
 
 // function findMax(...numbers) {
@@ -1033,10 +1030,10 @@
 
 
 // What will be the output of the above code?
-
+// 40
+// -Infinity
 // ===================================================================================================================
-
-//  62. Function Returning Objects
+// q.62. Function Returning Objects
 
 
 // function createUser(name, age) {
@@ -1051,10 +1048,9 @@
 
 
 // What will be the output of the above code?
-
+// { name: 'Alice', age: 25 }
 // ===================================================================================================================
-
-//  63. Default Parameters and Dynamic Values
+// q.63. Default Parameters and Dynamic Values
 
 
 // function calculateTotal(price, tax = price * 0.1) {
@@ -1066,10 +1062,10 @@
 
 
 // What will be the output of the above code?
-
+// 110
+// 230
 // ===================================================================================================================
-
-//  64. Closure with Function Inside Function
+// q.64. Closure with Function Inside Function
 
 
 // function outer() {
@@ -1087,11 +1083,9 @@
 
 
 // What will be the output of the above code?
-
+// Outer Inner
 // ===================================================================================================================
-
-
-//  65. Rest Operator and Array Length
+// q.65. Rest Operator and Array Length
 
 
 // function countArgs(...args) {
@@ -1103,10 +1097,10 @@
 
 
 // What will be the output of the above code?
-
+// 3
+// 4
 // ===================================================================================================================
-
-//  66. Object Method with Default Parameters
+// q.66. Object Method with Default Parameters
 
 
 // const userProfile = {
@@ -1121,12 +1115,10 @@
 
 
 // What will be the output of the above code?
-
-
+// Hi, John
+// Hello, John
 // ===================================================================================================================
-
-
-//  67. Rest Parameters and Sorting
+// q.67. Rest Parameters and Sorting
 
 
 // function sortNumbers(...numbers) {
@@ -1137,12 +1129,9 @@
 
 
 // What will be the output of the above code?
-
-
+// [ 2, 5, 8, 10 ]
 // ===================================================================================================================
-
-
-//  68. Closures and Private Variables
+// q.68. Closures and Private Variables
 
 
 // function bankAccount(initialBalance) {
@@ -1157,10 +1146,9 @@
 
 
 // What will be the output of the above code?
-
+// 1000
 // ===================================================================================================================
-
-//  69. Default Arguments with Multiple Parameters
+// q.69. Default Arguments with Multiple Parameters
 
 
 // function processPayment(amount, fee = 2, discount = 0) {
@@ -1172,10 +1160,10 @@
 
 
 // What will be the output of the above code?
-
+// 92
+// 205
 // ===================================================================================================================
-
-//  70. Function Returning Function with Parameters
+// q.70. Function Returning Function with Parameters
 
 
 // function multiplier(factor) {
@@ -1188,7 +1176,6 @@
 // console.log(double(5));
 
 
-
-
 // What will be the output of the above code?
+// 10
 // ===================================================================================================================
