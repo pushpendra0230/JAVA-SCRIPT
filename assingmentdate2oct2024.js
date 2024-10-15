@@ -19,7 +19,7 @@
 // {
 //     const [a,b,c,d,e,f,g,h]=rest;
 //     return a+b+c+d+e+f+g+h;
-//   }
+// }
 //   let  a  = sumnumbers(32,55,44,33,76,5,4,3);
 //   console.log(a);
 // output:-
@@ -283,34 +283,153 @@
 // ===============================================================================================================================
 // q.19.Write a function buildTeam that takes an unknown number of team members using the rest operator and returns an array of their names.
 
-// ===============================================================================================================================
-// q.20Create a function discountPrice that takes two positional arguments: price and discountPercentage. If no discount is provided, it should default to 10%.
+// function buildTeam(...members) 
+// {
+//     return members;
+// }  
+//   let team=buildTeam("Alice", "Bob", "Charlie", "David");
+//   console.log(team);
 
+// output:-
+// [ 'Alice', 'Bob', 'Charlie', 'David' ]
+// ===============================================================================================================================
+// q.20.Create a function discountPrice that takes two positional arguments: price and discountPercentage. If no discount is provided, it should default to 10%.
+
+// function discountPrice(price, discountPercentage=10)
+// {
+//     const discount = (price*discountPercentage)/100;
+//     return price-discount;
+//  }
+//  let price = 190;
+//  let b  = discountPrice(price);
+//  console.log(b);
+
+// output:-
+// 171
 // ===============================================================================================================================
 // q.21.Write a function describePet that accepts two arguments: petName and petType. If no petType is provided, it should default to "dog".
 
+// function describePet(petName, petType = "dog") 
+// {
+//     return `${petName} is a ${petType}`;
+// }
+// let name="pug";
+// let a = describePet(name);
+// console.log(a);
+
+// output:-
+// pug is a dog
 // ===============================================================================================================================
 // q.22.Create a function calculateArea that accepts two arguments: length and width. If width is not provided, it should default to the same value as length (for a square).
 
+// function lol( length,width=length)
+// {
+//     return length*width;
+// }
+//  let a = lol(7);
+//  console.log(a);
+
+// output:-
+// 49
 // ===============================================================================================================================
 // q.23.Write a function joinStrings that accepts an unknown number of strings using the rest operator and returns them concatenated into one string.
 
+// function student(...string)
+// {
+//    const[a,b]=string;
+//    return a+b;
+// }
+// let a = student("pushpendra","soni");
+// console.log(a);
+
+// output:-
+// pushpendrasoni
 // ===============================================================================================================================
 // q.24.Create a function createUserProfile that accepts three arguments: name, email, and role. If no role is provided, it should default to "user".
 
+// function user(name,email,role= "user")
+// {
+//     return(`name is ${name} email is ${email} role ${role} `);
+// }
+// let name = "pushpendra soni";
+// let email = "sonipushpendra256@gmail.com";
+// let a = user(name,email);
+// console.log(a);
+
+// output:-
+// name is pushpendra soni email is sonipushpendra256@gmail.com role user 
 // ===============================================================================================================================
 // q.25.Write a function divideNumbers that takes two arguments: a and b, with b defaulting to 1 if not provided.
 
+// function div(a,b=1)
+// {
+//     return a/b;
+// }
+//   let a = div(10);
+//   console .log(a);
+
+// output:-
+// 10
 // ===============================================================================================================================
 // q.26.Create a function combineArrays that accepts an unknown number of arrays using the rest operator and returns one combined array.
 
+
+// function arry(...rest)
+// {
+//   return rest.flat();
+// }
+// let a = arry([1,2,3,4],[4,5,6,,7]);
+// console.log(a);
+
+// output:-
+// [
+//     1, 2, 3, 4,
+//     4, 5, 6, 7
+// ]
 // ===============================================================================================================================
 // q.27.Write a function introduceEmployee that takes two positional arguments: employeeName and position, with position defaulting to "intern".
 
+// function introduceEmployee(employeeName,position="intern") 
+// {
+//     return `${employeeName} is a ${position}.`;
+// }
+// let employee1 = introduceEmployee("pushpendra soni");
+// let employee2 = introduceEmployee("prajjal sir", "developer");
+
+// console.log(employee1);
+// console.log(employee2);
+
+// output:-
+// pushpendra soni is a intern.
+// prajjal sir is a developer.
 // ===============================================================================================================================
 // q.28.Create a function findAverage that takes an unknown number of scores using the rest operator and returns the average score.
 
+// function findAverage(...scores) 
+// {
+//     const total=scores.reduce((acc,score)=>acc+score,0);
+//     return total / scores.length;
+// }
+// let average=findAverage(85,90,78);
+// console.log(average);
+
+
+// output:-
+// 84.33333333333333
 // ===============================================================================================================================
 // q.29.Write a function buildCar that accepts three arguments: brand, model, and year. If no year is provided, it should default to the current year.
 
+// function buildCar(brand,model,year=2024) 
+// {
+//     return{
+//         brand:brand,
+//         model:model,
+//         year:year
+//     };
+// }
+// let car = buildCar("Toyota", "Corolla");
+// console.log(car);
+
+// output:-
+// { brand: 'Toyota', model: 'Corolla', year: 2024 }
 // ===============================================================================================================================
