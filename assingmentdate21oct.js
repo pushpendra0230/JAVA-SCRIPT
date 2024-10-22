@@ -341,11 +341,382 @@
 // Explanation:-
 // Yah getObjectKeys function ek object obj aur ek callback function ko leta hai. Callback function object ke keys par lagta hai.
 // Keys Extraction:
-// Function ke andar, Object.keys(obj) ka istemal karke object obj ke keys ko prapt kiya jaata hai. Is case mein, { a: 1, b: 2 } ke keys ['a', 'b'] hote hain.
+// Function ke andar, Object.keys(obj) ka istemal karke object obj ke keys ko liya jata hai. Is case mein, { a: 1, b: 2 } ke keys ['a', 'b'] hote hain.
 // Function Call:
 // Jab getObjectKeys({ a: 1, b: 2 }, keys => keys.join(", ")) call kiya jaata hai, to extracted keys ko callback function par pass kiya jaata hai.
 // Callback Function:
 // Callback function keys => keys.join(", ") keys array ko comma se join karke ek string banaata hai, jo a, b hota hai.
 // Output:
 // Isliye, output a, b hota hai, jo object ke keys ka comma-separated string representation hai.
+// ===================================================================================================
+// q.18. 
+//     function getObjectValues(obj, callback) {
+//         return callback(Object.values(obj));
+//     }
+//     console.log(getObjectValues({ a: 1, b: 2 }, values => values.reduce((a, b) => a + b)));
+    
+// Output: ?
+
+// 3
+
+// Explanation:-
+// Function getObjectValues:
+// Ek object obj aur ek callback function ko input leta hai.
+// Extract Values:
+// Object.values(obj) ka use karke object { a: 1, b: 2 } ke values [1, 2] extract kiye jaate hain.
+// Callback Function:
+// Callback function values.reduce((a, b) => a + b) ko array [1, 2] par apply kiya jaata hai, jo values ko jodta hai.
+// Pehla aur akhri iteration: 1 + 2 = 3.
+// Final Output:
+// Callback function se return value 3 hoti hai, jo console pe print hoti hai.
+// ===================================================================================================
+// q.19. 
+//     function capitalizeWords(arr, callback) {
+//         return callback(arr.map(word => word.charAt(0).toUpperCase() + word.slice(1)));
+//     }
+//     console.log(capitalizeWords(["hello", "world"], words => words.join(" ")));
+    
+// Output: ?
+
+// Hello World
+
+// Explanation:-
+// Function capitalizeWords:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// map Method:
+// arr.map(word => word.charAt(0).toUpperCase() + word.slice(1)) har word ke first letter ko uppercase mein convert karta hai aur baaki word ko same rakhta hai.
+// Example: "hello" becomes "Hello", and "world" becomes "World".
+// Callback Function:
+// Callback function words.join(" ") capitalized words ko join karta hai, aur ek string banata hai: "Hello World".
+// Final Output:
+// Callback function se "Hello World" return hota hai, jo console pe print hota hai.
+// ===================================================================================================
+// q.20. 
+//     function createFullName(first, last, callback) {
+//         return callback(`${first} ${last}`);
+//     }
+//     console.log(createFullName("John", "Doe", name => name));
+    
+// Output: ?
+
+// John Doe
+
+// Explanation:-
+// Function createFullName:
+// Yeh function do arguments first aur last (first name aur last name) ko leta hai, aur ek callback function ko pass karta hai.
+// String Interpolation:
+// Backticks (${first} ${last}) ka use karke, first aur last name ko concatenate karke ek full name banaata hai, jaise "John Doe".
+// Callback Function:
+// Callback function name => name full name ko simply return karta hai bina kisi modification ke.
+// Final Output:
+// "John Doe" console pe print hota hai, jo full name hai.
+// ===================================================================================================
+// q.21. 
+//     function isPrime(num, callback) {
+//         const prime = num > 1 && [...Array(num).keys()].slice(2).every(n => num % n !== 0);
+//         return callback(prime);
+//     }
+//     console.log(isPrime(7, result => result ? "Prime" : "Not Prime"));
+    
+// Output: ?
+
+// Prime
+
+// Explanation:-
+// Function isPrime:
+// Yeh function ek number num aur ek callback function ko input leta hai.
+// Prime Check Logic:
+// num > 1 ensures ke number 1 se bada hai.
+// [...Array(num).keys()].slice(2) se number tak ek array banayi jaati hai, jisme numbers 2 se lekar num - 1 tak ke numbers hote hain.
+// .every(n => num % n !== 0) ye check karta hai ki number num ko 2 se lekar num - 1 tak ke kisi bhi number se divide karne par remainder 0 na ho. Agar remainder 0 hota hai, to number prime nahi hota.
+// Callback Function:
+// Agar prime true hota hai, to callback function "Prime" return karta hai; agar false hota hai to "Not Prime" return hota.
+// Final Output:
+// Since 7 ek prime number hai, result "Prime" console pe print hota hai.
+// ===================================================================================================
+// q.22. 
+//     function findLongestWord(arr, callback) {
+//         const longest = arr.reduce((a, b) => a.length > b.length ? a : b);
+//         return callback(longest);
+//     }
+//     console.log(findLongestWord(["cat", "elephant", "dog"], word => word));
+    
+// Output: ?
+
+// elephant
+
+// Explanation:-
+// Function findLongestWord:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Longest Word Dhoondne ka Logic:
+// .reduce() method ka istemal karke array ke har word ko compare kiya jata hai.
+// Ye check karta hai ki kaunsa word sabse lamba hai aur usse longest word ke roop mein rakhta hai.
+// Callback Function:
+// Jab longest word mil jata hai, ye callback function ko call karta hai, jisme longest word ko argument ke roop mein pass karta hai.
+// Final Output:
+// Diye gaye array ["cat", "elephant", "dog"] ke liye, longest word "elephant" hai.
+// Isliye, console par result "elephant" print hota hai.
+// ===================================================================================================
+// q.23. 
+//     function doubleNumbers(arr, callback) {
+//         return callback(arr.map(num => num * 2));
+//     }
+//     console.log(doubleNumbers([1, 2, 3], nums => nums.join(", ")));
+    
+// Output: ?
+
+// 2, 4, 6
+
+// Explanation:-
+// Function doubleNumbers:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Numbers ko Double Karne ka Logic:
+// arr.map(num => num * 2) ki wajh se array ke har number ko 2 se guna kiya jata hai, jo ek naya array banata hai.
+// Callback Function:
+// Naye array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, 2, 3] ke liye, naye array [2, 4, 6] banta hai.
+// Callback function nums.join(", ") se result "2, 4, 6" ke roop mein console par print hota hai.
+// ===================================================================================================
+// q.24. 
+//     function findSquare(num, callback) {
+//         return callback(num * num);
+//     }
+//     console.log(findSquare(4, square => square));
+    
+// Output: ?
+
+// 16
+
+// Explanation:-
+// Function findSquare:
+// Yeh function ek number num aur ek callback function ko input leta hai.
+// Square Dhoondne ka Logic:
+// Function num * num se number ka square calculate karta hai.
+// Callback Function:
+// Square value ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye number 4 ke liye, square 16 hota hai.
+// ===================================================================================================
+// q.25. 
+//     function splitString(str, callback) {
+//         return callback(str.split(" "));
+//     }
+//     console.log(splitString("Hello World", arr => arr.length));
+    
+// Output: ?
+
+// 2
+
+// Explanation:-
+// Function splitString:
+// Yeh function ek string str aur ek callback function ko input leta hai.
+// String ko Split Karne ka Logic:
+// Function str.split(" ") se string ko space ke basis par split karke ek array banata hai.
+// Callback Function:
+// Naye array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye string "Hello World" ke liye, array ["Hello", "World"] banta hai.
+// Callback function arr.length se array ki length 2 hoti hai.
+// Isliye, console par result 2 print hota hai.
+// ===================================================================================================
+// q.26. 
+//     function countWordsInSentence(sentence, callback) {
+//         const count = sentence.split(" ").length;
+//         return callback(count);
+//     }
+//     console.log(countWordsInSentence("This is a test", count => count));
+    
+// Output: ?
+
+// 4
+
+// Explanation:-
+// Function countWordsInSentence:
+// Yeh function ek string sentence aur ek callback function ko input leta hai.
+// Sentence Mein Words Gine Ka Logic:
+// Function sentence.split(" ") se sentence ko space ke basis par split karke ek array banata hai aur us array ki length ko count karta hai.
+// Callback Function:
+// Count value ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye sentence "This is a test" ke liye, words ki count 4 hoti hai.
+// Isliye, console par result 4 print hota hai.
+// ===================================================================================================
+// q.27. 
+//     function convertToArray(obj, callback) {
+//         return callback(Object.entries(obj));
+//     }
+//     console.log(convertToArray({ a: 1, b: 2 }, arr => arr.length));
+    
+// Output: ?
+
+// 2
+
+// Explanation:-
+// Function convertToArray:
+// Yeh function ek object obj aur ek callback function ko input leta hai.
+// Object ko Array Mein Convert Karne ka Logic:
+// Function Object.entries(obj) se object ke key-value pairs ko ek array of arrays mein convert karta hai.
+// Callback Function:
+// Naye array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye object { a: 1, b: 2 } ke liye, array [['a', 1], ['b', 2]] banta hai.
+// Callback function arr.length se array ki length 2 hoti hai.
+// Isliye, console par result 2 print hota hai.
+// ===================================================================================================
+// q.28. 
+//     function getFirstChar(str, callback) {
+//         return callback(str.charAt(0));
+//     }
+//     console.log(getFirstChar("", char => char));
+    
+// Output: ?
+
+
+// Explanation:-
+// Function getFirstChar:
+// Yeh function ek string str aur ek callback function ko input leta hai.
+// First Character Dhoondne ka Logic:
+// Function str.charAt(0) se string ke pehle character ko prapt karta hai.
+// Callback Function:
+// Pehle character ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye string "" (khali string) ke liye, pehla character nahi hota.
+// Isliye, console par result "" (khali string) print hota hai.
+// ===================================================================================================
+// q.29. 
+//     function filterPositiveNumbers(arr, callback) {
+//         return callback(arr.filter(num => num > 0));
+//     }
+//     console.log(filterPositiveNumbers([-1, 0, 2, 3], nums => nums));
+    
+// Output: ?
+
+// [ 2, 3 ]
+
+// Explanation:-
+// Function filterPositiveNumbers:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Positive Numbers Filter Karne ka Logic:
+// Function arr.filter(num => num > 0) se array ke sirf positive numbers ko filter karta hai.
+// Callback Function:
+// Filtered array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [-1, 0, 2, 3] ke liye, filtered array [2, 3] banta hai.
+// Isliye, console par result [2, 3] print hota hai.
+// ===================================================================================================
+// q.30. 
+//     function extractNumbers(arr, callback) {
+//         return callback(arr.filter(el => typeof el === "number"));
+//     }
+//     console.log(extractNumbers([1, "two", 3], nums => nums));
+    
+// Output: ?
+
+// [ 1, 3 ]
+
+// Explanation:-
+// Function extractNumbers:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Numbers Extract Karne ka Logic:
+// Function arr.filter(el => typeof el === "number") se array mein se sirf numbers ko filter karta hai.
+// Callback Function:
+// Filtered array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, "two", 3] ke liye, filtered array [1, 3] banta hai.
+// Isliye, console par result [1, 3] print hota hai.
+// ===================================================================================================
+// q.31. 
+//     function checkStringLength(str, maxLength, callback) {
+//         return callback(str.length <= maxLength);
+//     }
+//     console.log(checkStringLength("Hello", 5, isValid => isValid ? "Valid" : "Too long"));
+    
+// Output: ?
+
+// Valid
+
+// Explanation:-
+// Function checkStringLength:
+// Yeh function ek string str, ek maximum length maxLength, aur ek callback function ko input leta hai.
+// String Length Check Karne ka Logic:
+// Function str.length <= maxLength se check karta hai ki string ki length maximum length se chhoti ya barabar hai ya nahi.
+// Callback Function:
+// Boolean result ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye string "Hello" aur maximum length 5 ke liye, string ki length 5 hoti hai, jo valid hai.
+// Isliye, console par result "Valid" print hota hai.
+// ===================================================================================================
+// q.32. 
+//     function getObjectEntries(obj, callback) {
+//         return callback(Object.entries(obj));
+//     }
+//     console.log(getObjectEntries({ a: 1, b: 2 }, entries => entries.length));
+    
+// Output: ?
+
+// 2
+
+// Explanation:-
+// Function getObjectEntries:
+// Yeh function ek object obj aur ek callback function ko input leta hai.
+// Object Entries Dhoondne ka Logic:
+// Function Object.entries(obj) se object ke key-value pairs ko ek array of arrays mein convert karta hai.
+// Callback Function:
+// Naye array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye object { a: 1, b: 2 } ke liye, array [['a', 1], ['b', 2]] banta hai.
+// Callback function entries.length se array ki length 2 hoti hai.
+// Isliye, console par result 2 print hota hai.
+// ===================================================================================================
+// q.33. 
+//     function countDown(num, callback) {
+//         while (num > 0) {
+//             callback(num);
+//             num--;
+//         }
+//     }
+//     countDown(3, n => console.log(n));
+    
+// Output: ?
+
+// 3
+// 2
+// 1
+
+// Explanation:-
+// Function countDown:
+// Yeh function ek number num aur ek callback function ko input leta hai.
+// Countdown Karne ka Logic:
+// while (num > 0) loop ka istemal karke function num ko 0 se chhota hone tak decrement karta hai.
+// Har iteration mein, current value of num ko callback function ko pass karta hai.
+// Callback Function:
+// Callback function n => console.log(n) se current number ko console par print kiya jata hai.
+// Final Output:
+// Diye gaye number 3 ke liye, output console par hoga:-
+// 3
+// 2
+// 1
+// ===================================================================================================
+// q.34. 
+//     function addElements(arr, callback) {
+//         const sum = arr.reduce((a, b) => a + b, 0);
+//         return callback(sum);
+//     }
+//     console.log(addElements([1, 2, 3, 4], total => total));
+    
+// Output: ?
+
+// 10
+
+// Explanation:-
+// Function addElements:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Elements Ka Sum Dhoondne ka Logic:
+// Function arr.reduce((a, b) => a + b, 0) se array ke saare elements ka sum calculate karta hai.
+// Callback Function:
+// Total sum ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, 2, 3, 4] ke liye, sum 10 hota hai.
+// Isliye, console par result 10 print hota hai.
 // ===================================================================================================
