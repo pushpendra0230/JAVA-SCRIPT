@@ -720,3 +720,330 @@
 // Diye gaye array [1, 2, 3, 4] ke liye, sum 10 hota hai.
 // Isliye, console par result 10 print hota hai.
 // ===================================================================================================
+// q.35. 
+//     function getCharCode(char, callback) {
+//         return callback(char.charCodeAt(0));
+//     }
+//     console.log(getCharCode("A", code => code));
+    
+// Output: ?
+
+// 65
+
+// Explanation:-
+// Function getCharCode:
+//  Yeh function ek character char aur ek callback function ko input leta hai.
+// Character Code Dhoondne ka Logic:
+//  char.charCodeAt(0) se character ka ASCII code calculate hota hai.
+// Callback Function:
+//  Code ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+//  "A" ka ASCII code 65 hota hai, isliye console par result 65 print hota hai.
+// ===================================================================================================
+// q.36. 
+//     function createArray(length, callback) {
+//         return callback(Array.from({ length }, (_, i) => i + 1));
+//     }
+//     console.log(createArray(5, arr => arr));
+    
+// Output: ?
+
+// [ 1, 2, 3, 4, 5 ]
+
+// Explanation:-
+// Function createArray:
+//  Yeh function ek length aur ek callback function ko input leta hai.
+// Array Banane ka Logic:
+//  Array.from({ length }, (_, i) => i + 1) se 1 se lekar length tak ke consecutive numbers se array banti hai.
+// Callback Function:
+//  Ye array callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+//  Length 5 ke liye array [1, 2, 3, 4, 5] banti hai, aur console par print hoti hai.
+// ===================================================================================================
+// q.37. 
+
+
+//     function getMax(arr, callback) {
+//         return callback(Math.max(...arr));
+//     }
+//     console.log(getMax([1, 2, 3], max => max));
+    
+// Output: ?
+
+// 3
+
+// Explanation:-
+// Function getMax:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Maximum Value Dhoondne ka Logic:
+// Math.max(...arr) se array ke saare elements me se maximum value milti hai.
+// Callback Function:
+// Maximum value ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, 2, 3] ke liye maximum value 3 hoti hai, jo console par print hoti hai.
+// ===================================================================================================
+// q.38. 
+//     function getMin(arr, callback) {
+//         return callback(Math.min(...arr));
+//     }
+//     console.log(getMin([10, 20, 5], min => min));
+    
+// Output: ?
+
+// 5
+
+// Explanation:-
+// Function getMin:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Minimum Value Dhoondne ka Logic:
+// Math.min(...arr) se array ke saare elements me se minimum value milti hai.
+// Callback Function:
+// Minimum value ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [10, 20, 5] ke liye minimum value 5 hoti hai, jo console par print hoti hai.
+// ===================================================================================================
+// q.39. 
+//     function sortDescending(arr, callback) {
+//         return callback(arr.sort((a, b) => b - a));
+//     }
+//     console.log(sortDescending([5, 3, 8], arr => arr));
+    
+// Output: ?
+
+// [ 8, 5, 3 ]
+
+// Explanation:-
+// Function sortDescending:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Descending Order Mein Sort Karne ka Logic:
+// arr.sort((a, b) => b - a) se array ko descending order mein sort kiya jata hai.
+// Callback Function:
+// Sorted array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [5, 3, 8] ke liye sorted array [8, 5, 3] hoti hai, jo console par print hoti hai.
+// ===================================================================================================
+// q.40. 
+//     function checkPalindrome(str, callback) {
+//         const isPalindrome = str === str.split("").reverse().join("");
+//         return callback(isPalindrome);
+//     }
+//     console.log(checkPalindrome("madam", result => result ? "Palindrome" : "Not Palindrome"));
+    
+// Output: ?
+
+// Palindrome
+
+// Explanation:-
+// Function checkPalindrome:
+// Yeh function ek string str aur ek callback function ko input leta hai.
+// Palindrome Check Karne ka Logic:
+// str === str.split("").reverse().join("") se check kiya jata hai ki string apne aap se barabar hai ya nahi.
+// Callback Function:
+// Result ko callback function ko pass kiya jata hai, jo "Palindrome" ya "Not Palindrome" return karta hai.
+// Final Output:
+// Diye gaye string "madam" ke liye result "Palindrome" hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.41. 
+//     function filterLongStrings(arr, minLength, callback) {
+//         return callback(arr.filter(str => str.length >= minLength));
+//     }
+//     console.log(filterLongStrings(["short", "very long string"], 5, result => result));
+    
+// Output: ?
+
+// [ 'short', 'very long string' ]
+
+// Explanation:-
+// Function filterLongStrings:
+// Yeh function ek array arr, minimum length minLength, aur ek callback function ko input leta hai.
+// Long Strings Filter Karne ka Logic:
+// arr.filter(str => str.length >= minLength) se array se un strings ko chuna jata hai jinki length minLength se badi ya barabar hoti hai.
+// Callback Function:
+// Filtered array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array ["short", "very long string"] ke liye, result [ 'short', 'very long string' ] hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.42. 
+//     function calculateAverage(arr, callback) {
+//         const average = arr.reduce((a, b) => a + b, 0) / arr.length;
+//         return callback(average);
+//     }
+//     console.log(calculateAverage([10, 20, 30], avg => avg));
+    
+// Output: ?
+
+// 20
+
+// Explanation:-
+// Function calculateAverage:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Average Calculate Karne ka Logic:
+// arr.reduce((a, b) => a + b, 0) / arr.length se array ke elements ka sum nikaal kar unki count se divide kiya jata hai.
+// Callback Function:
+// Calculated average ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [10, 20, 30] ke liye average 20 hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.43. 
+//     function repeatString(str, times, callback) {
+//         return callback(str.repeat(times));
+//     }
+//     console.log(repeatString("A", 5, repeated => repeated));
+    
+// Output: ?
+
+// AAAAA
+
+// Explanation:-
+// Function repeatString:
+// Yeh function ek string str, repeat karne ka count times, aur ek callback function ko input leta hai.
+// String Ko Repeat Karne ka Logic:
+// str.repeat(times) se string ko times baar repeat kiya jata hai.
+// Callback Function:
+// Repeated string ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye string "A" ko 5 baar repeat karne par result "AAAAA" hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.44. 
+//     function getLastElement(arr, callback) {
+//         return callback(arr[arr.length - 1]);
+//     }
+//     console.log(getLastElement([1, 2, 3], el => el));
+    
+// Output: ?
+
+// 3
+
+// Explanation:-
+// Function getLastElement:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Last Element Dhoondne ka Logic:
+// arr[arr.length - 1] se array ka last element milta hai.
+// Callback Function:
+// Last element ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, 2, 3] ke liye last element 3 hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.45. 
+//     function removeWhitespace(str, callback) {
+//         return callback(str.replace(/\s+/g, ''));
+//     }
+//     console.log(removeWhitespace("   Hello World   ", result => result));
+    
+// Output: ?
+
+// HelloWorld
+
+// Explanation:-
+// Function removeWhitespace:
+// Yeh function ek string str aur ek callback function ko input leta hai.
+// Whitespace Remove Karne ka Logic:
+// str.replace(/\s+/g, '') se string se saare whitespaces ko hata diya jata hai.
+// Callback Function:
+// Modified string ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye string " Hello World " se whitespace hataane par result "HelloWorld" hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.46. 
+//     function findUnique(arr, callback) {
+//         return callback([...new Set(arr)]);
+//     }
+//     console.log(findUnique([1, 2, 2, 3], unique => unique));
+    
+// Output: ?
+
+// [ 1, 2, 3 ]
+
+// Explanation:-
+// Function findUnique:
+// Yeh function ek array arr aur ek callback function ko input leta hai.
+// Unique Elements Dhoondne ka Logic:
+// new Set(arr) se array ke unique elements ko nikaalne ke liye Set ka istemal kiya jata hai, aur [...] se unhe phir se array me convert kiya jata hai.
+// Callback Function:
+// Unique elements ka array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [1, 2, 2, 3] ke liye unique elements [1, 2, 3] hote hain, jo console par print hote hain.
+// ===================================================================================================
+// q.47. 
+//     function calculateFactorial(num, callback) {
+//         const factorial = num <= 1 ? 1 : num * calculateFactorial(num - 1, () => {});
+//         return callback(factorial);
+//     }
+//     console.log(calculateFactorial(5, fact => fact));
+    
+// Output: ?
+
+// NaN
+
+// Explanation:-
+// Function calculateFactorial:
+// Yeh function ek number num aur ek callback function ko input leta hai.
+// Factorial Calculate Karne ka Logic:
+// Recursion ka istemal karke num <= 1 hone par 1 return kiya jata hai, warna num * calculateFactorial(num - 1, () => {}) se factorial calculate hota hai.
+// Callback Function:
+// Calculated factorial ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye number 5 ke liye factorial calculate karne par result NaN milta hai, kyunki callback function ko sahi tarike se istemal nahi kiya gaya hai. Isse yeh pata chalta hai ki recursion me callback function ka istemal nahi kiya gaya hai.
+// ===================================================================================================
+// q.48. 
+//     function flattenArray(arr, callback) {
+//         return callback(arr.flat());
+//     }
+//     console.log(flattenArray([[1, 2], [3, 4]], flat => flat));
+    
+// Output: ?
+
+// [ 1, 2, 3, 4 ]
+
+// Explanation:-
+// Function flattenArray:
+// Yeh function ek nested array arr aur ek callback function ko input leta hai.
+// Array Ko Flatten Karne ka Logic:
+// arr.flat() se nested array ko ek single-level array me convert kiya jata hai.
+// Callback Function:
+// Flattened array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye nested array [[1, 2], [3, 4]] ko flatten karne par result [1, 2, 3, 4] hota hai, jo console par print hota hai.
+// ===================================================================================================
+// q.49. 
+//     function getCommonElements(arr1, arr2, callback) {
+//         const common = arr1.filter(value => arr2.includes(value));
+//         return callback(common);
+//     }
+//     console.log(getCommonElements([1, 2, 3], [2, 3, 4], result => result));
+    
+// Output: ?
+
+// [ 2, 3 ]
+
+// Explanation:-
+// Function getCommonElements:
+// Yeh function do arrays arr1 aur arr2 aur ek callback function ko input leta hai.
+// Common Elements Dhoondne ka Logic:
+// arr1.filter(value => arr2.includes(value)) se arr1 ke un elements ko chuna jata hai jo arr2 me bhi maujood hain.
+// Callback Function:
+// Common elements ka array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye arrays [1, 2, 3] aur [2, 3, 4] ke liye common elements [2, 3] hote hain, jo console par print hote hain.
+// ===================================================================================================
+// q.50. 
+//     function extractAges(people, callback) {
+//         return callback(people.map(person => person.age));
+//     }
+//     const people = [{ name: "John", age: 30 }, { name: "Jane", age: 25 }];
+//     console.log(extractAges(people, ages => ages));
+    
+// Output: ?
+
+// [ 30, 25 ]
+
+// Explanation:-
+// Function extractAges:
+// Yeh function ek array people aur ek callback function ko input leta hai.
+// Ages Ko Extract Karne ka Logic:
+// people.map(person => person.age) se har vyakti ki age ko extract kiya jata hai aur ek naya array banaya jata hai.
+// Callback Function:
+// Extracted ages ka array ko callback function ko pass kiya jata hai, jo result ko handle karta hai.
+// Final Output:
+// Diye gaye array [{ name: "John", age: 30 }, { name: "Jane", age: 25 }] se ages ko extract karne par result [30, 25] milta hai, jo console par print hota hai.
+// ===================================================================================================
