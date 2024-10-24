@@ -318,3 +318,11 @@
 //     console.log("custom function");
 // });
 // abc();
+// function a(i,sum)
+// {
+//     if(i==0) return 0;
+//     return i*a(i-1);
+// }
+// let i=4;
+// let ab=a(i);
+// console.log(ab);
