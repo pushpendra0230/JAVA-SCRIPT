@@ -326,3 +326,137 @@
 // let i=4;
 // let ab=a(i);
 // console.log(ab);
+
+
+
+// chapter 5. Array Methods in JS 
+
+// Push : already created array ke andar mai koi naya data add karne ke kaam ata hai. 
+
+// Push mai data add hota hai at the end of the preexisting array. 
+
+//    2.    pop: : already created array ke andar mai data ko remove karne ke kaam ata hai. 
+
+//          Pop mai data piche se remove hoti hai. 
+
+//    3.   shift: deletes the first element from an array. 
+
+//   4.   unshift: 
+
+//  //unshift : ek naya element insert karne ke kaam aata hai 
+
+// //uske pehle wale sabhi elements shift hote hain 
+
+// arr1.unshift("Pushpendra"); 
+
+// console.log(arr1); 
+
+  
+
+// Splice: //splice:change karta hai content of an array by adding removing or replacing 
+
+// let fruits = ["apple", "banana", "kiwi", "orange"]; 
+
+// fruits.splice(1, 1, "grapes");  
+
+// //(startindex, no of elements delete karna hai,element jise insert karna hai); 
+
+// console.log(fruits); 
+
+// fruits.splice(1, 3); 
+
+// console.log(fruits); 
+
+// Original array mai change ho jata hai. 
+
+// Koi naya array return nahi ho raha hai 
+
+// fruits.splice(3);//wo element remove ho jayega jiska position number mention kiya hua hai 
+
+// console.log(fruits); 
+
+// fruits.splice("a"); //yeh syntax galat hai isse pura array remove ho jayega jab pura array khali karna ho to iss galat syntax ka phyda utha sakte hai 
+
+// console.log(fruits); 
+
+ 
+
+// Slice: 
+
+// //slice 
+
+// //slice: array ko copy karta hai 
+
+// //uske pehle element se start karta hai aur last element tak 
+
+// // returns a shallow copy of a portion of an array into new array 
+
+// let fruits1 = ["apple", "banana", "kiwi", "orange", "pot", "lion"]; 
+
+// let fruits2 = fruits1.slice(0, 4);//starting index jisko count karega and ending index jisko count nahi karega 
+
+// console.log(fruits2); 
+
+// console.log(fruits1);// mai koi changes nahi hua  
+
+// 3. includes : is used as linear search returns boolean result if found true else false 
+
+// //includes 
+
+// //includes: array me ek element hai ya nahi ye check karta hai 
+
+// let fruits3 = ["apple", "banana", "kiwi", "orange", "pot", "lion"]; 
+
+// console.log(fruits3.includes("pushpendra")); //false 
+
+ 
+
+// console.log(fruits3.includes("apple")); //true 
+
+ 
+
+// 4.Join: 
+
+ 
+
+// //join 
+
+// //join: array ko string me convert karta hai 
+
+// let fruits4 = ["apple", "banana", "kiwi", "orange", "pot"]; 
+
+// let res = fruits4.join(",");//, is a delimiter  
+
+// console.log(res); //apple,banana,kiwi,orange,pot 
+
+ 
+
+// 5.Reverse: 
+
+// //reverse 
+
+// //reverse: array ko reverse karta hai 
+
+// let fruits5 = ["apple", "banana", "kiwi", "orange", "pot"]; 
+
+// console.log(fruits5.reverse()); 
+
+ 
+
+// 6.//merge two arrays 
+
+// let fruits6 = ["apple", "banana", "kiwi", "orange", "pot"]; 
+
+// let fruits7 = ["lion", "tiger", "bear"]; 
+
+// console.log(fruits6.concat(fruits7));//this makes a new array and doesnot make changes in original arrays 
+
+// console.log(fruits7); 
+
+ 
+
+// Using spread operator is alternate of concat: 
+
+// console.log([...fruits6, ...fruits7]); //using spread operator 
+
+// console.log(fruits6); 
