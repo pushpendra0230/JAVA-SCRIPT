@@ -460,3 +460,453 @@
 // console.log([...fruits6, ...fruits7]); //using spread operator 
 
 // console.log(fruits6); 
+
+// Callbacks in Array Methods: 
+
+ 
+ 
+
+//foreach loop 
+
+// let fruits = [ 
+
+//   { name: "apple", color: "red" }, 
+
+//   { name: "banana", color: "yellow" }, 
+
+//   { name: "cherry", color: "red" }, 
+
+// ]; 
+
+// //iterate over each element 
+
+// fruits.forEach((fruit) => console.log(fruit)); 
+
+ 
+ 
+
+// //map 
+
+// let fruits = ["Apple", "Banana", "Kiwi"]; 
+
+// fruits.map((fruit) => console.log(fruit)); 
+
+// //yeh naya array banake deta hai original array mai changes nahi karta hai 
+
+// //foreach 
+
+// let numbers = [1, 2, 3, 4, 5]; 
+
+// let double = numbers.map((num) => num * 2); 
+
+// console.log(double); 
+
+// console.log(numbers); 
+
+ 
+ 
+
+// //map 
+
+// let numbers = [1, 2, 3, 4, 5, 6]; 
+
+// let arr = []; 
+
+// numbers.map((num) => { 
+
+//   if (num > 2) { 
+
+//     arr.push(num); 
+
+//   } 
+
+// }); 
+
+// console.log(arr); 
+
+ 
+// //foreach 
+
+// let numbers = [1, 2, 3, 4, 5, 6]; 
+
+// let arr = []; 
+
+// numbers.map((num) => { 
+
+//   if (num % 2 != 0) { 
+
+//     arr.push(num); 
+
+//   } 
+
+// }); 
+
+// console.log(arr); 
+
+ 
+// //filter 
+
+// //it creates new array with element jo cases ko pass karta hai 
+
+// let arr = [1, 2, 3, 4, 5, 6]; 
+
+// let even = arr.filter((num) => num % 2 === 0); 
+
+// console.log(even); 
+
+ 
+ 
+
+// //reduce 
+
+// // accumultor sum factorial 
+
+// let numbers = [1, 2, 3, 4]; 
+
+// let sum = numbers.reduce((acc, num) => acc + num, 0); 
+
+// console.log(sum); 
+
+ 
+ 
+
+// //reduce 
+
+// // accumultor sum factorial 
+
+// let numbers = [1, 2, 3, 4]; 
+
+// let sum = numbers.reduce((acc, num) => acc * num, 1); 
+
+// console.log(sum); 
+
+ 
+ 
+
+// //reduce 
+
+// // accumultor sum factorial 
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+
+// let sum = numbers.reduce((acc, num) => { 
+
+//   if (num % 2 == 0) acc += num; 
+
+//   return acc; 
+
+// }, 0); 
+
+// console.log(sum); 
+
+ 
+ 
+
+// //Find 
+
+// let numbers = [1, 2, 3, 4, 5, 3, 20]; 
+
+// let found = numbers.find((num) => num > 10); 
+
+// console.log(found); 
+
+ 
+ 
+
+// First occurrence of the condition jo statisfy ho rahi hai usko return karke deta hai otherwise undefined return karta hai. 
+
+ 
+
+// let numbers = [1, 2, 3, 4, 5, 3, 12, 35, 20]; 
+
+// let found = numbers.sort((a, b) => b - a); 
+
+// console.log(found); 
+
+ 
+
+// let numbers = [1, 2, 3, 4, 5, 3, 0]; 
+
+// let found = numbers.findIndex((num) => num > 10); 
+
+// console.log(found); 
+
+// //foreach ke thorugh hi orginal array mai change karna hai 
+
+// let numbers = [1, 2, 3, 4, 5, 6]; 
+
+// numbers.forEach((num, index, arr) => { 
+
+//   arr[index] = num * 2; 
+
+// }); 
+
+// console.log(numbers); 
+
+ 
+// Foreach undefined return karta hai. Kuch nahi return karna matlab undefined return karna 
+
+// Map ek naya array return karta hai. 
+
+ 
+
+// Foreach tab use karein jab ap array mai koi changes nahi chahte ho 
+
+ 
+
+ 
+
+// Foreach allows mutation where map does not allow mutation  
+
+// Filters condition statisfy hone par elements ko ek naya array mai dhal kar return karke deta hai 
+
+// Reduce is for accumlation type of method jiska use hum summation factorail nikalna ya continuos array ka koi operation perform karne ke time use karte hai. 
+
+// 2level depth: 
+
+// let numbers = [ 
+
+//   { 
+
+//     name: "prajjal", 
+
+//     marks: [85, 90, [95, 98]], 
+
+//   }, 
+
+//   { 
+
+//     name: "kishan", 
+
+//     marks: [95, 86, 97], 
+
+//   }, 
+
+// ]; 
+
+// console.log(numbers); 
+
+// //scores ko extract karenge 
+
+// let scores = numbers.map((num) => num.marks); 
+
+// console.log(scores); 
+
+ 
+ 
+
+// let flatscores = scores.flat(2);//2 level depth 
+
+// console.log(flatscores); 
+
+// 3d level depth: 
+
+// let numbers = [ 
+
+//   { 
+
+//     name: "prajjal", 
+
+//     marks: [85, 90, [95, 98], [[56, 96, 89]]], 
+
+//   }, 
+
+//   { 
+
+//     name: "kishan", 
+
+//     marks: [95, 86, 97], 
+
+//   }, 
+
+// ]; 
+
+// console.log(numbers); 
+
+// //scores ko extract karenge 
+
+// let scores = numbers.map((num) => num.marks); 
+
+// console.log(scores); 
+
+ 
+ 
+
+// let flatscores = scores.flat(3); //3 level depth 
+
+// console.log(flatscores); 
+
+ 
+ 
+
+// Infinity: 
+
+// let numbers = [ 
+
+//   { 
+
+//     name: "prajjal", 
+
+//     marks: [85, 90, [95, 98], [[56, 96, 89]]], 
+
+//   }, 
+
+//   { 
+
+//     name: "kishan", 
+
+//     marks: [95, 86, 97], 
+
+//   }, 
+
+// ]; 
+
+// console.log(numbers); 
+
+// //scores ko extract karenge 
+
+// let scores = numbers.map((num) => num.marks); 
+
+// console.log(scores); 
+
+ 
+ 
+
+// let flatscores = scores.flat(Infinity); //infinite level depth 
+
+// console.log(flatscores); 
+
+ 
+ 
+
+// FlatMap: 
+
+// //flatMap 
+
+// //combination of map and flat 
+
+// let numbers = [1, 2, 3]; 
+
+// let res = numbers.flatMap((num) => [num, num * 3]); 
+
+// console.log(res); 
+// let employees = [ 
+
+//   { 
+
+//     name: "prajjal", 
+
+//     salary: 1500000, 
+
+//   }, 
+
+//   { 
+
+//     name: "kishan", 
+
+//     salary: 800000, 
+
+//   }, 
+
+// ]; 
+
+// let res = employees.flatMap((employee) => [employee.name, employee.salary * 2]); 
+
+// console.log(res); 
+
+ 
+// Ques: sabhi users ko lekar unquie purchases kya hai? 
+
+ 
+
+// let users = [ 
+
+//   { name: "Kishan", purchases: ["Bulb", "Hati", "Ghora"] }, 
+
+//   { name: "Rahul", purchases: ["Bulb", "Dog", "Heater"] }, 
+
+//   { name: "Nikhil", purchases: ["Jhadhu", "Lemon", "Mirchi", "Doll"] }, 
+
+// ]; 
+
+// let userpurchase = users.flatMap((user) => [...user.purchases]); 
+
+// console.log(userpurchase); 
+
+// let unquiepurchases = [...new Set(userpurchase)]; 
+
+// console.log(unquiepurchases); 
+
+// let numbers = [1, 2, 4, 3, 5]; 
+
+// let haseven = numbers.some((num) => num % 2 == 0); 
+
+// console.log(haseven); 
+
+ 
+ 
+
+// let numbers = [40, 2, 4, 30, 50]; 
+
+// let haseven = numbers.every((num) => num % 2 == 0); 
+
+// console.log(haseven); 
+
+ 
+ 
+
+// let numbers = ["banana", "apple", "kiwi"]; 
+
+// console.log(numbers.indexOf("appl")); 
+
+ 
+ 
+
+// let numbers = ["banana", "apple", "kiwi", "banana", "kiwi"]; 
+
+// console.log(numbers.lastIndexOf("banana")); 
+
+ 
+
+// Flat: 
+ 
+
+// let numbers = [ 
+
+//   1, 
+
+//   [2, 3], 
+
+//   [4, 5, 6], 
+
+//   7, 
+
+//   [ 
+
+//     [1, 2, 3], 
+
+//     [4, 5, 6], 
+
+//   ], 
+
+// ]; 
+
+// let arr = numbers.flat(); 
+
+// console.log(arr); 
+
+// //flat converts into 1d behind the specific depth 
+
+// let users = [ 
+
+//   { name: "Kishan", purchases: ["Bulb", "Hati", "Ghora"] }, 
+
+//   { name: "Rahul", purchases: ["Bulb", "Dog", "Heater"] }, 
+
+//   { name: "Nikhil", purchases: ["Jhadhu", "Lemon", "Mirchi", "Doll"] }, 
+
+// ]; 
+
+// let userpurchase = users.map((user) => user.purchases); 
+
+// console.log(userpurchase.flat()); 
