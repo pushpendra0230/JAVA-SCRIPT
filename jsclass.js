@@ -815,7 +815,7 @@
 // console.log(res); 
 
  
-// Ques: sabhi users ko lekar unquie purchases kya hai? 
+// Ques: kya isme sabhi users ko lekar unquie purchases kya hai? 
 
  
 
