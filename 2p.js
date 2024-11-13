@@ -7,4 +7,4 @@ for(let i=0;i<a;i++)
     console.log(i)
 }
 console.log("after completetion of the loop",i);
-console.log(i+2); 
+console.log(i+2);

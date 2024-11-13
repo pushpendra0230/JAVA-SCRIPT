@@ -721,10 +721,10 @@
 // Isliye, console par result 10 print hota hai.
 // ===================================================================================================
 // q.35. 
-//     function getCharCode(char, callback) {
-//         return callback(char.charCodeAt(0));
-//     }
-//     console.log(getCharCode("A", code => code));
+    // function getCharCode(char, callback) {
+    //     return callback(char.charCodeAt(0));
+    // }
+    // console.log(getCharCode("A", code => code));
     
 // Output: ?
 
