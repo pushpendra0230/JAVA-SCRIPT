@@ -909,6 +909,4 @@
 
 // let userpurchase = users.map((user) => user.purchases); 
 
-// console.log(userpurchase.flat()); 
-
-
+// console.log(userpurchase.flat());
