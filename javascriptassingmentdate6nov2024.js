@@ -4,9 +4,12 @@
 // // ===============================================================================================
 // // q.1.Use map to create a new array that doubles the values of the given array [1, 2, 3, 4].
 
-// const originalArray = [1, 2, 3, 4];
-//    const doubledArray = originalArray.map(value => value * 2);
-//    console.log(doubledArray);  
+// let arr=[1,2,3,4];
+// let doublearr=arr.map((value)=>
+//     {
+//         return value*2;
+//     });
+// console.log(doublearr);
 
 // //    Output: [2, 4, 6, 8]
 // // ===============================================================================================
