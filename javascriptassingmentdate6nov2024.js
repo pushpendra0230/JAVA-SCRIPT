@@ -253,9 +253,9 @@
 // // ===============================================================================================
 // q.31.Use reduce to flatten an array [[1, 2], [3, 4], [5, 6]] into a single array.
 
-// const nestedArray = [[1, 2], [3, 4], [5, 6]];
-// const flattenedArray = nestedArray.reduce((acc, val) => acc.concat(val), []);
-// console.log(flattenedArray);
+// const nestedarray = [[1, 2], [3, 4], [5, 6]];
+// const flattenedarray = nestedarray.reduce((acc, val) => acc.concat(val), []);
+// console.log(flattenedarray);
 
 // Output: [ 1, 2, 3, 4, 5, 6 ]
 // // ===============================================================================================
