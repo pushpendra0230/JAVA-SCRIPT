@@ -440,7 +440,7 @@
 // Output: [ 'one', 'two', 'three' ]
 // // ===============================================================================================
 // q.57.Use reduce to implement a custom filter function.
-// // ===============================================================================================
+// // ======================================================================================================
 // q.58.Use sort to arrange an array of objects by the length of their name property.
 
 // const people = [{name: "pushpendra"}, {name: "prajjal"}, {name: "nikhil"}];
