@@ -83,12 +83,31 @@
 // console.log(result);
 
 
-let id = "8";
-let rollno =2323;
-let studentname = "pushpendra";
-let obj={
-  id,
-  rollno,
-  studentname,
-};
-console.log(obj);
+// let id = "8";
+// let rollno =2323;
+// let studentname = "pushpendra";
+// let obj={
+//   id,
+//   rollno,
+//   studentname,
+// };
+// console.log(obj);
+
+// let arr=[1,2,3,4,5];
+// let code=arr.map((x)=>Array.isArray(x));
+// console.log(code)
+
+// let arr=[1,2,3,4,5];
+// let code=arr.some((x)=>Array.isArray(x));
+// console.log(code)
+
+// let restaurants=[
+//     {name:"Romantic Rooftop",distance:3,rating:4.5},
+//     {name:"Cozy Corner",distance:6,rating:4.2},
+//     {name:"Candlelight Cafe",distance: 2,rating:3.9},
+//     { name: "Starry Sky Diner", distance: 4,rating:4.8},
+//   ];
+//   let restaurant=restaurants.filter(
+//     (restaurant)=>restaurant.distance<=5&&restaurant.rating>=4
+//   );
+//   console.log(restaurant);
