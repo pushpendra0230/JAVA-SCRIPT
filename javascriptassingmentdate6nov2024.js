@@ -463,16 +463,14 @@
 
 
 
-// Deep object merging using reduce:
-const arr = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }];
+// // Deep object merging using reduce:
+// const arr = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }];
 
-let mergeobj = arr.reduce((acc, obj) => {
-  return { ...acc, ...obj };
-}, {});
+// let mergeobj = arr.reduce((acc, obj) => {
+//   return { ...acc, ...obj };
+// }, {});
 
-console.log(mergeobj);
+// console.log(mergeobj);
 
 
 // ====================
-
-
