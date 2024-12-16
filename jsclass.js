@@ -891,6 +891,50 @@
 
 // ]; 
 
+
+const arr = [["name", "John"], ["age", 25]];
+const obj = Object.fromEntries(arr);
+
+console.log(obj);
+
+
+
+const data = [["id", 1], ["details", { gender: "female", status: "active" }]];
+const obj = Object.fromEntries(data);
+
+console.log(obj);
+
+
+
+const data = [];
+const obj = Object.fromEntries(data);
+
+console.log(obj);
+
+=======================================
+
+const arr = [{ id: 1 }, { id: 2 }];
+const obj = arr.reduce((acc, item) => {
+    acc[item.id] = item;
+    return acc;
+}, {});
+
+console.log(obj);
+
+
+
+const numbers = [3, 6, 2, 8, 5];
+const max = numbers.reduce((max, num) => (num > max ? num : max), numbers[0]);
+
+console.log(max);
+
+
+
+const arr = [{ id: 1 }, { id: 3 }, { id: 5 }];
+const obj = arr.find(item => item.id === 3);
+
+console.log(obj);
+
 // let arr = numbers.flat(); 
 
 // console.log(arr); 
@@ -910,6 +954,30 @@
 // let userpurchase = users.map((user) => user.purchases); 
 
 // console.log(userpurchase.flat());
+// ===============================================================================
 
+// function outerFunc(outerValue) 
+// {
+//     return function innerFunc(innerValue) 
+//     {
+//         return outerValue + innerValue;
+//     };
+// }
+
+// const addFive = outerFunc(5);
+// console.log(addFive(10));
+// console.log(addFive(3));
+
+
+// What will be the output of the above code EXPLAIN?
+
+const robot = {
+    name: "Robo",
+    greet(...messages) {
+        return `${this.name}: ${messages.join(" ")}`;
+    }
+};
+
+console.log(robot.greet("Hello", "World!"));
 
 
