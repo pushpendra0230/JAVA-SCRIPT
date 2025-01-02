@@ -1059,3 +1059,80 @@ const movies = [
 //     }
 //   });
 //   console.log(ratingGroups);  
+
+
+
+// let x = 10;
+//  {
+//  let x = 20;
+//  {
+//  let x = 30;
+//  console.log(x);
+//  }
+//  console.log(x);
+//  }
+//  console.log(x);
+
+
+// let a = [1, 2, 3];
+//  let b = [...a];
+//  b[0] = 100;
+//  console.log(a);
+//  console.log(b);
+
+// const obj = {
+//   prop: 42,
+//   func: function () {
+//   return this.prop;
+//   },
+//   };
+//   console.log(obj.func());
+//   const extractedFunc = obj.func;
+//   console.log(extractedFunc());
+
+// function outer() {
+//   let count = 0;
+//   return function inner() {
+//   count++;
+//   return count;
+//   };
+//   }
+//   const counter = outer();
+//  console.log(counter());
+//   console.log(counter());
+//   console.log(counter());
+
+// const arr = [10, 20, 30];
+//  arr[10] = 100;
+//  console.log(arr.length);
+//  console.log(arr[5]);
+
+
+// console.log(0 || null || undefined || false || "hello");
+//  console.log(0 && null && undefined && false && "hello");
+
+
+// let func = (a = 1, b = a * 2, c = b * 3) => {
+//   return a + b + c;
+//   };
+//   console.log(func());
+//   console.log(func(2));
+//   console.log(func(2, 3));
+
+
+// let x = { a: 1 };
+//  let y = x;
+//  x.a = 42;
+//  console.log(y.a);
+//  x = { a: 10 };
+//  console.log(y.a);
+
+
+// let x = "1";
+// console.log(+x + +"1" + +"1.1");
+
+// (function () {
+//   var a = (b = 3);
+//   })();
+//   console.log(typeof a);
+//   console.log(typeof b);
