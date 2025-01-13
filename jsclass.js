@@ -1136,3 +1136,108 @@ const movies = [
 //   })();
 //   console.log(typeof a);
 //   console.log(typeof b);
+
+
+
+
+const users = [
+  { id: 1, name: 'Alice', age: 25, city: 'New York', skills: ['JavaScript', 'React'] },
+  { id: 2, name: 'Bob', age: 30, city: 'San Francisco', skills: ['Python', 'Django'] },
+  { id: 3, name: 'Charlie', age: 35, city: 'New York', skills: ['Java', 'Spring'] },
+  { id: 4, name: 'David', age: 28, city: 'Los Angeles', skills: ['JavaScript', 'Node.js'] },
+  { id: 5, name: 'Eve', age: 22, city: 'Chicago', skills: ['C++', 'Algorithms'] },
+];
+
+// function findtheuserbythename(name)
+// {
+//   return users.find(theuser=>theuser.name===name);
+// }
+// console.log(findtheuserbythename("Bob"));
+
+// function filtertheusersbythecity(city) 
+// {
+//   return users.filter(usercity => usercity.city === city);
+// }
+// console.log(filtertheusersbythecity("New York"));
+
+
+
+// function findtheuserswiththeskill(skill) 
+// {
+//   return users.filter(userskill => userskill.skills.includes(skill));
+// }
+// console.log(findtheuserswiththeskill("JavaScript"));
+
+
+// function calculatetheaverageage() 
+// {
+//   const totalage = users.reduce((sum, user) => sum + user.age, 0);
+//   return totalage / users.length;
+// }
+// console.log(calculatetheaverageage());
+
+
+// function hastheskill(skill) 
+// {
+//   return users.some(user => user.skills.includes(skill));
+// }
+// console.log(hastheskill("React"));
+
+
+
+// function findtheyoungestuser() 
+// {
+//   return users.reduce((youngest,user) => 
+//     {
+//     if(user.age<youngest.age) 
+//     {
+//       return user;
+//     }
+//      else 
+//     {
+//       return youngest;
+//     }
+//   });
+// }
+// console.log(findtheyoungestuser());
+
+
+// function addtheskilltotheuser(name, skill) 
+// {
+//   const user = users.find(user => user.name === name);
+//   if (user) 
+//   {
+//     user.skills.push(skill);
+//   }
+//   return user;
+// }
+// console.log(addtheskilltotheuser("Charlie", "DSA"));
+
+
+
+// function removetheuserbytheId(id) 
+// {
+//   return users.filter(user=>user.id!==id);
+// }
+// console.log(removetheuserbytheId(2));
+
+
+// function sorttheusersbytheage() 
+// {
+//   return users.sort((a,b)=>a.age-b.age);
+// }
+// console.log(sorttheusersbytheage());
+
+
+
+
+
+// function counttheusersbythecity() 
+// {
+//   return users.reduce((counts, user) => 
+//   {
+//     counts[user.city]=(counts[user.city]||0)+1;
+//     return counts;
+//   }, {});
+// }
+// console.log(counttheusersbythecity());
